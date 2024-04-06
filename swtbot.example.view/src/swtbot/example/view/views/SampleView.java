@@ -208,6 +208,8 @@ public class SampleView extends ViewPart {
 		hookContextMenu();
 		hookDoubleClickAction();
 		contributeToActionBars();
+
+
 	}
 
 	private void hookContextMenu() {
@@ -242,6 +244,7 @@ public class SampleView extends ViewPart {
 		drillDownAdapter.addNavigationActions(manager);
 // Other plug-ins can contribute there actions here
 		manager.add(new Separator(IWorkbenchActionConstants.MB_ADDITIONS));
+
 	}
 
 	private void fillLocalToolBar(IToolBarManager manager) {
