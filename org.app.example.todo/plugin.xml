@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Sample Category"
+            id="com.app.example.todo">
+      </category>
+      <view
+            id="com.app.example.todo.views.Main"
+            name="Todo List"
+            icon="icons/fileFolderType_filter.png"
+            class="com.app.example.todo.views.Main"
+            category="com.app.example.todo"
+            inject="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+
+</plugin>
