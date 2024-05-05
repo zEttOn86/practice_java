@@ -9,7 +9,7 @@
             id="com.app.example.todo">
       </category>
       <view
-            id="com.app.example.todo.views.Main"
+            id="com.app.example.todo.Main"
             name="Todo List"
             icon="icons/fileFolderType_filter.png"
             class="com.app.example.todo.views.Main"
