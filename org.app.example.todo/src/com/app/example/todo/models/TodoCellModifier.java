@@ -31,7 +31,7 @@ public class TodoCellModifier implements ICellModifier {
 	public boolean canModify(Object arg0, String arg1) {
 		switch (arg1) {
 		case "is_completed": 
-			return false;
+			return true;
 		case "priority":
 			return true;
 		case "created_date":
@@ -57,12 +57,7 @@ public class TodoCellModifier implements ICellModifier {
 
 		switch (arg1) {
 		case "is_completed": 
-			if(todoData.getIsCompleted()) {
-				return Character.toString((char)0x2611);
-			}
-			else {
-				return Character.toString((char)0x2610);
-			}
+			return todoData.getIsCompleted();
 		case "priority":
 			return todoData.getPriorityRank().getId();
 		case "created_date":

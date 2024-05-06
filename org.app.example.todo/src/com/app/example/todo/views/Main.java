@@ -94,6 +94,9 @@ public class Main extends ViewPart {
 				if(txt.equals("")) {
 					return;
 				}
+				// テキストボックスをクリア
+				// TODO: Mediatorパターンの実装でもいいのかもしれない。
+				txtTodo.setText("");
 				
 				// 新しいTODOを追加する。
 				tv.add((Object)new ToDo(txt));
@@ -178,7 +181,7 @@ public class Main extends ViewPart {
 
         // セルエディタの生成
         CellEditor[] cellEditors = new CellEditor[] {
-        		new TextCellEditor(table),
+        		new CheckboxCellEditor(table),
         		new ComboBoxCellEditor(table, priorityItems),
         		new TextCellEditor(table),
         		new TextCellEditor(table),
@@ -190,8 +193,6 @@ public class Main extends ViewPart {
         
         // セルモディファイアの設定
         tv.setCellModifier(new TodoCellModifier(tv, priorityItems));
-        
-        // チェックをつけたら、チェック画像に変更する。
 	}
 
 	/**
