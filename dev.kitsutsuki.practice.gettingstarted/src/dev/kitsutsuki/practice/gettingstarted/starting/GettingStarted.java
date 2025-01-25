@@ -3,6 +3,8 @@ package dev.kitsutsuki.practice.gettingstarted.starting;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 
+import org.eclipse.core.databinding.AggregateValidationStatus;
+import org.eclipse.core.databinding.Binding;
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.beans.typed.BeanProperties;
 import org.eclipse.core.databinding.observable.Observables;
@@ -60,14 +62,19 @@ public class GettingStarted {
 
 			}
 		});
+		Label errorLabel = new Label(shell, SWT.NONE);
 
 		DataBindingContext dbc = new DataBindingContext();
 
 		IObservableValue modelObservable = BeanProperties.value("amount").observe(model);
 
-		dbc.bindValue(WidgetProperties.text(SWT.Modify).observe(text), modelObservable);
+		Binding b = dbc.bindValue(WidgetProperties.text(SWT.Modify).observe(text), modelObservable);
 
 		dbc.bindValue(WidgetProperties.text().observe(label), modelObservable, null, null);
+		
+//		dbc.bindValue(WidgetProperties.text().observe(errorLabel),
+//				new AggregateValidationStatus(dbc.getBindings(), AggregateValidationStatus.MAX_SEVERITY), null, null);
+		dbc.bindValue(WidgetProperties.text().observe(errorLabel),b.getValidationStatus(),null, null);
 
 		GridLayoutFactory.swtDefaults().generateLayout(shell);
 	}

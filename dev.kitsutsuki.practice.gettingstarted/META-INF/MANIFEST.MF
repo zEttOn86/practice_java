@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Gettingstarted
-Bundle-SymbolicName: dev.kitsutsuki.practice.gettingstarted
+Bundle-SymbolicName: dev.kitsutsuki.practice.databinding.gettingstarted
 Bundle-Version: 1.0.0.qualifier
 Require-Bundle: org.eclipse.core.databinding;bundle-version="1.13.300",
  org.eclipse.core.databinding.beans;bundle-version="1.10.300",
@@ -14,6 +14,7 @@ Require-Bundle: org.eclipse.core.databinding;bundle-version="1.13.300",
 Automatic-Module-Name: dev.kitsutsuki.practice.gettingstarted
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Import-Package: org.eclipse.jface.layout,
+ org.eclipse.jface.viewers,
  org.eclipse.swt,
  org.eclipse.swt.events,
  org.eclipse.swt.widgets
