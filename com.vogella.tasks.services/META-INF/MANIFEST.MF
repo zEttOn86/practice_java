@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Services
+Bundle-SymbolicName: com.vogella.tasks.services
+Bundle-Version: 1.0.0.qualifier
+Import-Package: com.vogella.tasks.model
+Service-Component: OSGI-INF/com.vogella.tasks.services.internal.TransientTaskServiceImpl.xml
+Bundle-Vendor: VOGELLA
+Automatic-Module-Name: com.vogella.tasks.services
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-21

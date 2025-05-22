@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Printer
+Bundle-SymbolicName: com.kitsutsuki.sample.printer
+Bundle-Version: 1.0.0.qualifier
+Service-Component: OSGI-INF/com.kitsutsuki.sample.printer.HelloWorld.xml
+Bundle-Vendor: KITSUTSUKI
+Automatic-Module-Name: com.kitsutsuki.sample.printer
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-21
