@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Collections
+Bundle-SymbolicName: com.kitsutsuki.example.control.collections;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: KITSUTSUKI
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Import-Package: jakarta.inject;version="[2.0.0,3.0.0)"
+Automatic-Module-Name: com.kitsutsuki.example.control.collections
